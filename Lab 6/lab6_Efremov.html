@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sizing Up&Down</title>
+    <link rel="stylesheet" href="C:\Users\Админ\Desktop\Classification\Lab 6\style.css"/>
+    <link href="https://fonts.googleapis.com/cass2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+<header>
+    <div class="container">
+        <img class="touch" src="C:\Users\Админ\Desktop\Classification\Lab 6\logo.png" alt="pic">
+        <div class="wrapper">
+            <div class="offer multi">
+                <h1 class="line">С нашей помощью<br> вы получите то, о чём вы<br><span class="title_span line">мечтали!</span></h1>
+                <p class="offer_text">Наша целеустремленность + опыт позволят вам достичь ваших самых больших целей. Мы верим в вас!
+                    И мы уверены в этом на 100%. Вас невозможно будет остановить!
+                </p>
+                <a href="#" class="btn">Хотите знать больше?</a>
+            </div>
+            <img class="desktop animate__animated animate__fadeInDown header_img" src="C:\Users\Админ\Desktop\Classification\Lab 6\header-img.png" alt="pic">
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="container">
+        <h2 class="main_title desktop animate__animated animate__jackInTheBox">Что вам для этого понадобится?</h2>
+        <div class="main_block">
+            <div class="blocks">
+                <img src="C:\Users\Админ\Desktop\Classification\Lab 6\f3.png" alt="pic">
+                <h3>Обучение</h3>
+                <p>Почему бы вам не научиться создавать сайты наподобии этого?</p>
+            </div>
+            <div class="blocks">
+                <img class="imagen" src="C:\Users\Админ\Desktop\Classification\Lab 6\f4.png" alt="pic">
+                <h3>Возможности</h3>
+                <p>Путь к идеалу долгий, но можно хотя бы приблизится к нему.</p>
+            </div>
+            <div class="blocks">
+                <img src="C:\Users\Админ\Desktop\Classification\Lab 6\f5.png" alt="pic">
+                <h3>Успех</h3>
+                <p>Мы поможем вам, чтобы вы стали самым важным... Кем-то, я не знаю.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="form">
+    <div class="container">
+        <h2 class="second_title">Если заинтересованы, то введите:</h2>
+        <div class="second_block">
+            <form id="sending" class="input">
+                <input type="text" id="grow" placeholder="Имя"/><br>
+                <input type="text" id="grow1" placeholder="Ваш e-mail"/><br>
+                <input type="text" id="grow2" placeholder="Номер телефона"/><br>
+                <input type="text" id="grow3" placeholder="Чем вы заинтересованы?"/><br>
+                <button class="button" onclick="clearInputField()">!!!Я ВЫПОЛНЯЮ СВОЙ ДОЛГ!!!</button>
+                <span id="text-width" style="display: none; white-space: pre"></span>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="end">
+    <div class="typing_text">
+        <p>© Все права защищены</p>
+    </div>
+</section>
+<script>
+    const input = document.getElementById('grow');
+    const measurer = document.getElementById('text-width');
+
+    input.addEventListener('input', function(){
+        const style = window.getComputedStyle(input);
+        measurer.style.fontSize = style.fontSize;
+        measurer.style.fontFamily = style.fontFamily;
+        measurer.style.fontWeight = style.fontWeight;
+        measurer.style.letterSpacing = style.letterSpacing;
+        measurer.textContent = input.value || input.placeholder;
+        measurer.style.display = 'inline';
+        const textWidth = measurer.offsetWidth;
+        measurer.style.display = 'none';
+        input.style.width = Math.max(textWidth + 20, 150) + 'px';
+    });
+    function clearInputField() {
+        document.getElementById('sending').reset();
+    }
+</script>
+</body>
+</html>
