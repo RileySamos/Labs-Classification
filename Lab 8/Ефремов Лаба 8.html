@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Что-то на программистском</title>
+    <link rel="stylesheet" href="C:\Users\Админ\Desktop\Classification\Lab 8\Стили кода.css"/>
+    <link href="https:\\fonts.googleapis.com\cass2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https:\\fonts.googleapis.com\css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com\ajax\libs\animate.css\4.1.1\animate.min.css"/>
+    <link rel="stylesheet" href="https:\\stackpath.bootstrapcdn.com\bootstrap\4.5.0\css\bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <div class="container">
+        <img class="touch" src="C:\Users\Админ\Desktop\Classification\Lab 8\logo.png" alt="pic">
+        <div class="wrapper">
+            <div>
+                <h1 class="desktop animate__animated animate__rotateInDownLeft">С нашей помощью<br> вы получите то, о чём вы<br><span class="title_span">мечтали!</span></h1>
+                <p class="offer_text">Наша целеустремленность + опыт позволят вам достичь ваших самых больших целей. Мы верим в вас!
+                    И мы уверены в этом на 100%. Вас невозможно будет остановить!
+                </p>
+                <a href="#" class="btn">Больше информации!</a>
+            </div>
+            <img class="desktop animate__animated animate__lightSpeedInRight header_img" src="C:\Users\Админ\Desktop\Classification\Lab 8\header-img.png" alt="pic">
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="container">
+        <h2 class="main_title desktop animate__animated animate__fadeIn">Что будет по плану?</h2>
+        <div class="main_block">
+            <div class="blocks">
+                <img class="imagen desktop animate__animated animate__flip" src="C:\Users\Админ\Desktop\Classification\Lab 8\f3.png" alt="pic">
+                <h3>Обучение</h3>
+                <p>Почему бы вам не научиться создавать сайты наподобии этого?</p>
+            </div>
+            <div class="blocks">
+                <img class="imagen desktop animate__animated animate__flip" src="C:\Users\Админ\Desktop\Classification\Lab 8\f4.png" alt="pic">
+                <h3>Возможности</h3>
+                <p>Путь к идеалу долгий, но можно хотя бы приблизится к нему.</p>
+            </div>
+            <div class="blocks">
+                <img class="imagen desktop animate__animated animate__flip" src="C:\Users\Админ\Desktop\Classification\Lab 8\f5.png" alt="pic">
+                <h3>Успех</h3>
+                <p>Мы гарантируем, что вы сумеете трудоустроиться в высшие компании.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="buy">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text">Если заинтересованы, то введите:</div>
+        </div>
+    </div>
+    <form id="form" action="#">
+        <div class="container-row">
+                <div class="col-md-6 orderInfo">
+                    <h5>Необходимая информация о вас:</h5>
+                    <div class="row">
+                        <div class="col-md-4">Имя:</div>
+                        <div class="col-md-4"><input class="form-control" id="first" type="text" onchange="checkFirst();" required /></div>
+                        <div class="col-md-4"><span id="first_Check"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Фамилия:</div>
+                        <div class="col-md-4"><input class="form-control" id="last" type="text" onchange="checkLast();" required /></div>
+                        <div class="col-md-4"><span id="last_Check"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Номер телефона:</div>
+                        <div class="col-md-4"><input class="form-control" id="phone" type="text" onchange="checkPhone();" placeholder="+7 xxx xxx xx xx" required /></div>
+                        <div class="col-md-4"><span id="phone_Check"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Удобная дата встречи:</div>
+                        <div class="col-md-4">
+                            <input class="form-control" id="date" type="date" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Удобное время встречи:</div>
+                        <div class="col-md-4">
+                            <input class="form-control" id="time" type="time" required/>
+                        </div>
+                    </div>
+                    <button id="sendOrder" type="button" onclick="outputData()">Я заинтересован!</button>
+                </div>
+                <div id="hidden" class="col-md-6 orderDesc">
+                    <h5>Спасибо.</h5>
+                    <div class="row">
+                        <div id="summary"></div>
+                    </div>
+                </div>
+        </div>
+    </form>
+</section>
+<section class="form">
+    <div class="container">
+        <h2 class="second_title">Для обратной связи</h2>
+        <div class="second_block">
+            <form id="sending" class="input">
+                <input class="form-control" type="text" placeholder="Имя"/><br>
+                <input class="form-control" type="text" placeholder="Ваш e-mail"/><br>
+                <input class="form-control" type="text" placeholder="Номер телефона"/><br>
+                <input class="form-control" type="text" placeholder="В чём вопрос?"/><br>
+                <button class="button">Отправить запрос!</button>
+                <span id="text-width" style="display: none; white-space: pre"></span>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="end">
+    <div class="typing_text">
+        <p>© Во славу Супер Земли!</p>
+    </div>
+</section>
+<script src="C:\Users\Админ\Desktop\Classification\Lab 8\Код Java.js"></script>
+</body>
+</html>
