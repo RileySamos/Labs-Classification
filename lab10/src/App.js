@@ -2,7 +2,7 @@ import f3 from './images/f3.png';
 import f4 from './images/f4.png';
 import f5 from './images/f5.png';
 import './App.css';
-
+ //не работало как обычно (с указанием папки)
 function App() {
   return (
       <div className="container">
