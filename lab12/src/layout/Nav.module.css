@@ -1,0 +1,70 @@
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    padding: 1em;
+  }
+    
+  .logoContainer {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+
+  .icon {
+    margin-right: 8px;
+    height: 20px;
+  }
+
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+    
+  .nav ul li {
+    display: inline;
+  }
+    
+  .nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+     
+  .containerbutton {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .requestbtn {
+    background-color: rgb(13, 0, 255);
+    color: white;
+  }
+  
+  img {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  .calculationbtn {
+    background-color: rgb(0, 255, 47);
+    color: white;
+  }
+  
+  .logo {
+    height: 50px;
+  }
